@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Matrix Calculator</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+	<table id="mainTable">
+	<tr>
+		<td>
+			<table id = "Matrix A">
+				<tr>
+					<td colspan="7" id="title">Matrix A</td>
+				</tr>
+	
+				<tr>
+					<td><input type="text" id = "A11" placeholder = "A11" maxlength="10"/></td>
+					<td><input type="text" id = "A12" placeholder = "A12"  maxlength="10"/></td>
+				</tr>
+	
+				<tr>
+					<td><input type="text" id = "A21" placeholder = "A21"  maxlength="10"/></td>
+					<td><input type="text" id = "A22" placeholder = "A22"  maxlength="10"/></td>
+				</tr>
+	
+				<tr>
+					<td colspan="7" style="text-align:center" id="cLabelA">
+						<label>Columns:</label>
+						<select id="cListA" onchange="resizeCol('A')">
+							<option>1</option>
+							<option selected>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+						</select>
+					</td>
+				</tr>
+	
+				<tr>
+					<td colspan="7" style="text-align:center" id="rLabelA">
+						<label>Rows:</label>
+						<select id="rListA" onchange="resizeRow('A')">
+							<option>1</option>
+							<option selected>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</td>
+	
+		<td>
+			<button onclick="showB()">A x B</button>
+			<button onclick="result()">=</button>
+		</td>
+		
+		<td>
+			<table id = "Matrix B">
+				<tr>
+					<td colspan="7" id="title">Matrix B</td>
+				</tr>
+	
+				<tr>
+					<td><input type="text" id = "B11" placeholder = "B11" maxlength="10"/></td>
+					<td><input type="text" id = "B12" placeholder = "B12" maxlength="10"/></td>
+				</tr>
+	
+				<tr>
+					<td><input type="text" id = "B21" placeholder = "B21" maxlength="10"/></td>
+					<td><input type="text" id = "B22" placeholder = "B22" maxlength="10"/></td>
+				</tr>
+	
+				<tr>
+					<td colspan="7" style="text-align:center" id="cLabelB">
+						<label>Columns:</label>
+						<select id="cListB" onchange="resizeCol('B')">
+							<option>1</option>
+							<option selected>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+						</select>
+					</td>
+				</tr>
+	
+				<tr>
+					<td colspan="7" style="text-align:center" id="rLabelB">
+						<label>Rows:</label>
+						<select id="rListB" onchange="resizeRow('B')">
+							<option>1</option>
+							<option selected>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	
+	<tr>
+		<td></td>
+	
+		<td id="result"></td>
+	
+		<td></td>
+	</tr>
+	</table>
+
+</body>
+
+</html>
