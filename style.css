@@ -1,0 +1,30 @@
+td[id="title"]{
+text-align:center;
+background-color: red;
+}
+
+table[id="mainTable"] {
+width: 50%;
+margin: 100px;
+}
+table {
+margin: 50px;
+}
+
+td {
+background-color: yellow;
+}
+
+button {
+margin:30px;
+padding: 2px 12px;
+}
+
+input[type="text"] {
+width:40px;
+padding: 5px;
+font-size:16px;
+margin: 0px 0px 0px 0px;}
+
+input[type="number"] {
+font-size:12px;}
